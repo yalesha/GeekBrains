@@ -1,0 +1,49 @@
+import UIKit
+
+// MARK:- 1. Решить квадратное уравнение axˆ2 + bx + c = 0, где коэффициенты a, b, c - произвольные числа, причем а!=0
+let a:Float = 11
+let b:Float = 12
+let c:Float = 13
+var x1:Float
+var x2:Float
+var d:Float
+var discriminant:Float
+d = b * b - (4 * a * c)
+if (d >= 0){
+    discriminant = sqrt(d)
+    x1 = (-b + discriminant) / (2 * a)
+    x2 = (-b - (discriminant)) / (2 * a)
+    print(x1, x2)
+} else if(d < 0){
+    d = ((4 * a * c) - pow(b,2)) / (2 * a)
+    print(d)
+}
+
+
+// MARK:-  2. Даны катеты прямоугольного треугольника. Найти площадь, периметр и гипотенузу треугольника.
+
+var v:Double = 10
+var n:Double = 12
+var m:Double
+var p:Double
+var s:Double
+s = ((v * n) / 2)
+m = sqrt(pow(v,2) + pow(n,2))
+p = v + n + m
+print("Периметр треугольника равен \(p)")
+print("Гипотенуза треугольника равна \(m)")
+print("Площадь треугольника равна \(s)")
+
+
+// MARK:- 3. Пользователь вводит сумму вклада в банк и годовой процент. Найти сумму вклада через 5 лет.
+
+var deposit:Float = 1000
+var years:Float = 1
+let percent:Float = 5
+while years <= 5 {
+let oneYearPercent = deposit / 100
+let oneYearDeposit = oneYearPercent * percent
+deposit = deposit + oneYearDeposit
+years += 1
+}
+print("Сумма вклада через 5 лет \(deposit)")
